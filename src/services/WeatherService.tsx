@@ -27,7 +27,7 @@ const getCurrent = ({
   lon,
   key = process.env.REACT_APP_API_KEY,
 }: OneCallDTO) => {
-  return http.get<Object>(
+  return http.get<any>(
     `/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric&lang=vi`,
   );
 };
@@ -37,7 +37,7 @@ const getOneCall = ({
   lon,
   key = process.env.REACT_APP_API_KEY,
 }: OneCallDTO) => {
-  return http.get<Object>(
+  return http.get<any>(
     `/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}&units=metric&lang=vi&exclude=current,hourly,minutely`,
   );
 };
